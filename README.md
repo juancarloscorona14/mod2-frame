@@ -66,3 +66,17 @@ Con el fin de visualizar claramente la generalización del modelo de un arbol de
     Se muestra el árbol de decisión visualmente y se evalúa el rendimiento del modelo en los conjuntos de validación y prueba. También se realizan predicciones en nuevos datos.
 
 Podemos observar claramente que el modelo generaliza al realizar diferentes entrenamientos con diferentes parámetros. Al final, nos quedamos con el modelo que mejores resultados obtuvo (tercer modelo con parámetros default).
+
+#### Justificación de la selección de los hiperparámetros
+
+La justificación del uso de parámetros predeterminados (default) en el tercer modelo de árbol de decisión se basa en la búsqueda de un equilibrio entre simplicidad y rendimiento del modelo. A continuación se mencionan las razones más relevantes para utilizar los parámetros predeterminados:
+
+1. **Simplicidad y Generalidad**: Los parámetros predeterminados están diseñados para ser genéricos y funcionar bien en una amplia variedad de conjuntos de datos. Esto hace que el modelo sea más fácil de usar y generalizable a diferentes problemas sin necesidad de ajustar configuraciones específicas.
+
+2. **Prevención de Overfitting**: Los parámetros predeterminados suelen estar configurados para evitar el sobreajuste (overfitting) en la mayoría de los casos. Esto significa que el modelo tiende a tener una capacidad de generalización decente y no se ajusta demasiado a los datos de entrenamiento.
+
+3. **Reducción de la Complejidad**: Al utilizar los parámetros predeterminados, se reduce la complejidad del proceso de ajuste del modelo. Esto puede ser útil cuando se tiene un conjunto de datos relativamente pequeño o cuando se necesita un modelo rápido y simple para propósitos de análisis preliminares.
+
+4. **Menos Probabilidades de Caer en Minimos Locales**: La selección de hiperparámetros óptimos puede ser un proceso complejo y puede llevar a caer en mínimos locales si no se realiza adecuadamente. Utilizar parámetros predeterminados evita en gran medida este problema.
+
+5. **Facilita la Comparación con Otros Modelos**: Al utilizar parámetros predeterminados, es más fácil comparar el rendimiento de este modelo con otros modelos de aprendizaje automático, ya que todos los modelos se entrenan de manera similar.
