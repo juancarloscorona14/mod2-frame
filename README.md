@@ -32,6 +32,8 @@ Se ha utilizado el conjuto de datos Iris por su versatilidad y otras razones pr√
 
 4. Si deseas cambiar los datos de prueba, por favor modifica el .py
 
+NOTA: EN caso de que no se pueda visualizar correctamente la imagen dentro de github, por favor verifica que esta se guarde y se pueda visualizar donde se ha clonado el repositorio.
+
 ## Funcionamiento
 Esta seccion contiene una descripci√≥n general de la estructura del programa.
 
