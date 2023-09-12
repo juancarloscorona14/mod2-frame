@@ -134,7 +134,6 @@ y_pred = clf.predict(X_validation)
 # Visualizar arbol de decision
 plt.figure(figsize=(12, 8))
 plot_tree(clf, filled=True, feature_names=data.feature_names, class_names=data.target_names)
-plt.show()
 plt.savefig("arbol_decision_best_params.png")
 
 # Evaluar el modelo
@@ -178,3 +177,4 @@ print("Diagnostico de Ajuste de Modelo (fit):", model_fit)
 
 
 print('\nNOTA: Esta ejecucion de Diagnostico de Bias, Varianza y ajuste fue realizada para el modelo con los mejores parámetros.\nPor favor referirse a la documentación de las funciones para obtener un mejor entendimiento de las funciones utilizadas en este programa')
+plt.show()
