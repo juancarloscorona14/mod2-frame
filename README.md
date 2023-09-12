@@ -62,3 +62,5 @@ Con el fin de visualizar claramente la generalización del modelo de un arbol de
     En esta sección, se entrena un modelo de árbol de decisión con los mejores parámetros y parámetros predeterminados. Se divide el conjunto de datos en conjuntos de entrenamiento, validación y prueba. 
     
     Se muestra el árbol de decisión visualmente y se evalúa el rendimiento del modelo en los conjuntos de validación y prueba. También se realizan predicciones en nuevos datos.
+
+Podemos observar claramente que el modelo generaliza al realizar diferentes entrenamientos con diferentes parámetros. Al final, nos quedamos con el modelo que mejores resultados obtuvo (tercer modelo con parámetros default).
