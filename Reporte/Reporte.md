@@ -18,13 +18,49 @@ El conjunto de datos utilizado en este análisis es el conjunto de datos "Iris",
 - **Generalización:** 
     Dado que es un conjunto de datos bien conocido, permite evaluar la capacidad de un modelo de Árbol de Decisión para generalizar y clasificar nuevas muestras de flores iris.
 
+#### ¿Por qué este conjunto de datos es apropiado para generalizar este modelo? 
+
+- <u>Conjunto de datos bien estudiado y de referencia:</u>
+
+    El conjunto de datos Iris es uno de los más conocidos y utilizados en la comunidad de aprendizaje automático. Ha sido ampliamente estudiado y utilizado como referencia en numerosos trabajos de investigación y tutoriales. Esto lo convierte en una opción fiable para demostrar la capacidad de generalización de un algoritmo de aprendizaje automático.
+
+- <u>Complejidad adecuada:</u>
+
+    El conjunto de datos Iris tiene un tamaño moderado, con 150 muestras y 4 características (longitud del sépalo, anchura del sépalo, longitud del pétalo y anchura del pétalo). Consigue un equilibrio entre simplicidad y complejidad, lo que lo hace adecuado para varios algoritmos de aprendizaje automático, incluidos los árboles de decisión. Es lo suficientemente complejo como para demostrar la capacidad de un modelo para capturar patrones, pero no excesivamente complejo, lo que puede llevar a un sobreajuste.
+
+- <u>Clases Balanceadas:</u>
+
+    El conjunto de datos Iris contiene tres clases (especies: Setosa, Versicolor y Virginica), y cada clase tiene 50 muestras. La distribución equilibrada de las clases garantiza que el modelo no esté sesgado hacia una clase, lo que puede ser un problema en conjuntos de datos desequilibrados. Este equilibrio contribuye a una evaluación justa de la generalización del modelo.
+
+-  <u>Relevancia en el mundo real:</u>
+
+     El conjunto de datos Iris se deriva de un problema del mundo real: la clasificación de flores de iris basada en las medidas de sus sépalos y pétalos. Representa una versión simplificada de los problemas de clasificación del mundo real, lo que lo hace relevante para fines educativos e ilustrativos.
+
+- <u>Capacidad de visualización:</u>
+
+    El espacio de características 4D del conjunto de datos Iris permite una fácil visualización. Es posible crear gráficos de dispersión, gráficos de pares y otras visualizaciones para comprender mejor los datos y los límites de decisión del modelo, lo que ayuda a interpretar los resultados.
+
+- <u>Evaluación de la generalización:</u> 
+
+    Para demostrar que el modelo generaliza bien, dividimos el conjunto de datos en conjuntos de entrenamiento, validación y prueba. Esta separación nos permite evaluar el rendimiento del modelo en datos que nunca ha visto antes, garantizando que no se limita a memorizar los datos de entrenamiento, sino que aprende patrones significativos.
+
+- <u>Referencia común: </u>
+
+    Debido a su popularidad, el conjunto de datos Iris sirve de referencia común para comparar el rendimiento de distintos algoritmos de aprendizaje automático. El uso de este conjunto de datos permite realizar comparaciones justas y proporciona un punto de referencia para comprender el rendimiento de un modelo de árbol de decisión en comparación con otros algoritmos.
+
 ## Separación de datos
 
 El conjunto de datos se divide en tres conjuntos: entrenamiento, validación y prueba. La división es de 60% para entrenamiento, 20% para validación y 20% para prueba.
 
 ![Pie Chart](images/division_pie_chart.png)
 
+A continuación se muestra una vista previa de la separación de los datos del tercer modelo:
+
+![dta_previews](images/data_heads.png)
+
 NOTA: Esta division de datos es valida para el tercer modelo implementado en este trabajo.
+
+
 
 ## Modelos de Árbol de Decisión
 En esta seccion se realiza la implementacion de tres modelos de árbol de decisión. La diferencia entre los primeros dos es el criterio de ganancia de información del algoritmo. Esto con la intencion de hacer notar alguna diferencia entre criterios y diferenciar el desempeño entre modelos.
@@ -99,6 +135,14 @@ Los resultados obtenidos de la funcion implementada en el codigo son los siguien
 ![diagnosis](images/diagnose.png)
 
 En conjunto, estas observaciones implican que el modelo ha logrado un buen equilibrio entre sesgo y varianza. Se ajusta bien a los datos de entrenamiento sin sobreajustarse (bajo sesgo y baja varianza), lo cual es un resultado deseable en el aprendizaje automático.
+
+A continuación se muestra la comparación entre el conjunto de prueba y conjunto de validación para comprobar lo anterior:
+
+![comparison](images/low_var_low_bias.png)
+
+De la visualización anterior, podemos notar que para este modelo, los valores del conjunto de prueba y validación corresponden, por lo que se puede decir que tienen una varianza baja y un sesgo bajo.
+
+Para visualizar el balance entre las tres características, se realiza la siguiente gráfica:
 
 ![diag_visual](images/bias_variance_fit.png)
 
