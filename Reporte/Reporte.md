@@ -84,7 +84,17 @@ Como observación, este árbol puede ser "podado". Referirse a la sección de [M
 
 
 #### Análisis de Sesgo, Varianza y Ajuste del Modelo
-El diagnóstico de sesgo, varianza y ajuste del modelo se realiza en el tercer modelo con los mejores parámetros con el objetivo de determinar si existen sesgos, varianzas y engeneral, el ajuste del modelo. Los resultados obtenidos de la funcion implementada en el codigo son los siguientes:
+El diagnóstico de sesgo, varianza y ajuste del modelo se realiza en el tercer modelo con los mejores parámetros con el objetivo de determinar si existen sesgos, varianzas y engeneral, el ajuste del modelo. Para realizar este análisis, se utilizó una función definida por el usuario que toma en cuenta lo siguiente:
+
+- El  **bias_diagnosis** (diagnóstico de sesgo) se determina comparando la precisión de entrenamiento y la precisión de validación. Si la precisión del entrenamiento es mayor, sugiere un sesgo bajo (ajuste); de lo contrario, sugiere un sesgo alto (ajuste insuficiente (_underfitting_)).
+
+- El **variance_diagnosis** (diagnóstico de varianza) se determina comparando la puntuación F1 de entrenamiento y la puntuación F1 de validación. Si la puntuación F1 de entrenamiento es más alta, sugiere una varianza baja; de lo contrario, sugiere una varianza media (sobreajuste).
+
+- El diagnóstico **model_fit** (ajuste de modelo) se basa en los diagnósticos de sesgo y varianza. Si cumple los criterios de un buen ajuste (bajo sesgo y baja varianza), se etiqueta como "Buen ajuste (ajuste razonable)"; en caso contrario, se etiqueta como "Sobreajuste".
+
+Se puede apreciar con mayor detalle el funcionamiento y estructura de función _diagnose_model_performance()_ en el código del modelo: https://github.com/juancarloscorona14/mod2-frame/blob/main/decision_tree_framework.py
+
+Los resultados obtenidos de la funcion implementada en el codigo son los siguientes:
 
 ![diagnosis](images/diagnose.png)
 
